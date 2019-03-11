@@ -3,17 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
+    "@primer/components": "^11.0.0",
+    "@primer/css": "^12.1.1",
     "apollo-boost": "^0.3.1",
     "apollo-client": "^2.5.1",
     "apollo-link-http": "^1.5.12",
     "d3": "^5.9.1",
+    "date-fns": "^2.0.0-alpha.27",
     "graphql": "^14.1.1",
     "lodash": "^4.17.11",
+    "node-sass": "^4.11.0",
     "partial.lenses": "^14.17.0",
     "react": "^16.8.4",
     "react-apollo": "^2.5.2",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "recharts": "^1.5.0",
+    "victory": "^32.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
