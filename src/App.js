@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Hehehe: {process.env.REACT_APP_HELLO_WORLD}
           </a>
         </header>
       </div>
