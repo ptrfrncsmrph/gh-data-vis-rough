@@ -2,6 +2,9 @@ import { gql } from "apollo-boost"
 
 export default gql`
   query languages($login: String!) {
+    rateLimit {
+      remaining
+    }
     user(login: $login) {
       name
       avatarUrl
