@@ -38,11 +38,11 @@ const UsernameForm = ({ handleSubmit, handleChange, username }) => (
 
 const App = () => {
   const [username, setUsername] = useState("")
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitted(username)
   }
 
   const handleChange = ({ target: { value } }) => {
@@ -58,7 +58,7 @@ const App = () => {
           username={username}
         />
         {submitted && (
-          <Query query={languagesQuery} variables={{ login: username }}>
+          <Query query={languagesQuery} variables={{ login: submitted }}>
             {({ data, loading, error }) =>
               loading ? (
                 <h3>LOADING...</h3>

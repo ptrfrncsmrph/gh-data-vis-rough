@@ -1,0 +1,19 @@
+section.profile {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  img.avatar {
+    grid-row: span 2;
+    width: 10vw;
+    border-radius: 10vw;
+  }
+  h2 {
+    align-self: baseline;
+  }
+  margin: 2rem 0;
+}
+
+ul {
+  list-style: none;
+}

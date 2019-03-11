@@ -51,30 +51,31 @@ const ProfileView = ({ data }) => {
           Member since{" "}
           {formatDistance(new Date(data.user.createdAt), new Date())} ago.
         </span>
-        <ul>
-          {languageWeight(data).map(({ language, size }) => (
-            <li>
-              <strong>{language}:</strong>{" "}
-              {((size * 100) / totalSize).toFixed(2)}%
-            </li>
-          ))}
-        </ul>
-        <VictoryChart theme={VictoryTheme.material} domainPadding={10}>
-          <VictoryBar
-            data={languageWeight(data).map(({ language, size }) => ({
-              x: language,
-              y: size
-            }))}
-          />
-        </VictoryChart>
-        <VictoryPie
-          theme={VictoryTheme.material}
+      </section>
+      <h3>Language Usage</h3>
+      <ul>
+        {languageWeight(data).map(({ language, size }) => (
+          <li>
+            <strong>{language}:</strong> {((size * 100) / totalSize).toFixed(2)}
+            %
+          </li>
+        ))}
+      </ul>
+      <VictoryChart theme={VictoryTheme.material} domainPadding={10}>
+        <VictoryBar
           data={languageWeight(data).map(({ language, size }) => ({
             x: language,
             y: size
           }))}
         />
-      </section>
+      </VictoryChart>
+      <VictoryPie
+        theme={VictoryTheme.material}
+        data={languageWeight(data).map(({ language, size }) => ({
+          x: language,
+          y: size
+        }))}
+      />
     </>
   )
 }
